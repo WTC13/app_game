@@ -1,0 +1,143 @@
+:root {
+    --bg-black: #050505;
+    --card-dark: #121212;
+    --neon-green: #ccff00;
+    --neon-purple: #8a2be2;
+    --gold: #ffcc00;
+    --text-white: #ffffff;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+}
+
+.app-container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 20px 15px 100px 15px;
+}
+
+/* Header Status */
+.status-bar {
+    padding: 15px;
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    border-radius: 20px;
+    border: 1px solid #333;
+    margin-bottom: 25px;
+}
+
+.avatar-wrapper {
+    position: relative;
+}
+.avatar-wrapper img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--neon-green);
+}
+.level-badge {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background: var(--neon-green);
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.xp-progress-container {
+    width: 120px;
+    height: 6px;
+    background: #333;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+.xp-bar {
+    height: 100%;
+    background: var(--neon-green);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--neon-green);
+}
+
+.currency {
+    font-weight: bold;
+    color: var(--neon-green);
+    font-size: 1.1rem;
+}
+
+/* Ranking Cards */
+.rank-card {
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.gold { background: rgba(255, 204, 0, 0.1); border: 1px solid var(--gold); color: var(--gold); }
+.purple { background: rgba(138, 43, 226, 0.1); border: 1px solid var(--neon-purple); color: var(--neon-purple); }
+
+/* Modules */
+.modules-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.full-width { grid-column: span 2; }
+
+.module-card {
+    background: var(--card-dark);
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid #222;
+}
+
+.sports { border-top: 4px solid var(--neon-green); }
+.finance { border-top: 4px solid var(--neon-purple); }
+.xp-gain { background: var(--neon-green); color: black; }
+
+.card-header-icon i { font-size: 1.5rem; margin-bottom: 10px; display: block; }
+.activity-tag {
+    background: #1f1f1f;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+/* Nav */
+.bottom-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #444;
+}
+.nav-plus {
+    background: var(--neon-green);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 1.5rem;
+    box-shadow: 0 0 15px var(--neon-green);
+}
+.nav-item i { font-size: 1.3rem; color: #666; }
+.nav-item.active i { color: var(--neon-green); }
