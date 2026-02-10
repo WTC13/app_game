@@ -1,0 +1,65 @@
+:root {
+    --dark-bg: #0a0a0a;
+    --card-bg: #161616;
+    --neon-green: #CCFF00;
+    --electric-purple: #7000FF;
+    --gold: #FFD700;
+}
+
+body { background-color: var(--dark-bg); color: white; font-family: 'Inter', sans-serif; }
+.app-wrapper { max-width: 480px; margin: 0 auto; padding: 30px 20px 100px 20px; }
+
+/* Status de Ranking */
+.user-rank-status { background: rgba(112, 0, 255, 0.1); border: 1px solid var(--electric-purple); padding: 8px 15px; border-radius: 12px; font-size: 13px; }
+
+/* Ranking List */
+.rank-item {
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 18px;
+    margin-bottom: 10px;
+    border: 1px solid #222;
+}
+.rank-item.gold { border: 1px solid var(--gold); }
+.rank-item.user-highlight { background: var(--electric-purple); border: none; }
+
+.pos { font-weight: 800; width: 30px; font-size: 1.2rem; }
+.avatar { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid #333; }
+.text-orange { color: #FF8A00; }
+.bg-neon { background: var(--neon-green); color: black; font-weight: bold; }
+
+/* Community Cards */
+.community-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #222;
+    display: flex;
+    height: 120px;
+}
+.card-img { width: 35%; background-size: cover; background-position: center; }
+.card-body-custom { padding: 15px; width: 65%; display: flex; flex-direction: column; justify-content: center; }
+.btn-join {
+    background: var(--neon-green);
+    border: none;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 5px 15px;
+    border-radius: 8px;
+    margin-top: 8px;
+    width: fit-content;
+}
+.btn-join.joined { background: #333; color: white; }
+
+/* Custom Pills */
+.custom-pills .nav-link { background: #1a1a1a; color: #888; margin-right: 10px; border-radius: 10px; }
+.custom-pills .nav-link.active { background: var(--electric-purple); color: white; }
+
+/* Nav (Reutilizado) */
+.main-nav { position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); width: 90%; background: rgba(15, 15, 15, 0.95); backdrop-filter: blur(10px); border-radius: 25px; display: flex; justify-content: space-around; padding: 10px; border: 1px solid #333; }
+.nav-link { color: #555; font-size: 1.4rem; }
+.nav-link.active { color: var(--neon-green); }
+.nav-add { background: var(--neon-green); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: black; }

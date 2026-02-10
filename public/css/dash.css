@@ -1,0 +1,77 @@
+:root {
+    --dark-bg: #0a0a0a;
+    --card-bg: #161616;
+    --neon-green: #CCFF00;
+    --electric-purple: #7000FF;
+    --text-gray: #888888;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.app-wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 30px 20px 100px 20px;
+}
+
+/* Containers de Gráfico */
+.chart-section {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 24px;
+    border: 1px solid #222;
+}
+
+.chart-container {
+    height: 200px;
+    position: relative;
+}
+
+.chart-card-small {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 20px;
+    border: 1px solid #222;
+    height: 150px;
+}
+
+.section-title {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--text-gray);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Activity Feed */
+.activity-item {
+    display: flex;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 12px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-neon { background: var(--neon-green); color: black; }
+
+/* Wallet & Nav (Reutilizados da versão anterior) */
+.wallet-pill { background: var(--card-bg); padding: 8px 15px; border-radius: 12px; border: 1px solid #333; }
+.amount { color: var(--neon-green); font-weight: bold; }
+.main-nav { position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); width: 90%; background: rgba(20, 20, 20, 0.95); backdrop-filter: blur(10px); border-radius: 25px; display: flex; justify-content: space-around; padding: 10px; border: 1px solid #333; }
+.nav-link { color: var(--text-gray); font-size: 1.4rem; }
+.nav-link.active { color: var(--neon-green); }
+.nav-add { background: var(--neon-green); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: black; box-shadow: 0 0 15px var(--neon-green); }

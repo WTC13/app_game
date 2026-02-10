@@ -1,0 +1,71 @@
+:root {
+    --dark-bg: #050505;
+    --card-bg: #121212;
+    --neon-green: #CCFF00;
+    --electric-purple: #7000FF;
+}
+
+body { background-color: var(--dark-bg); color: white; font-family: 'Inter', sans-serif; }
+.app-wrapper { max-width: 480px; margin: 0 auto; padding: 30px 20px 100px 20px; }
+
+/* Tabs */
+.custom-pills .nav-link {
+    background: var(--card-bg);
+    color: white;
+    border-radius: 12px;
+    margin-right: 8px;
+    border: 1px solid #222;
+}
+.custom-pills .nav-link.active {
+    background: var(--neon-green);
+    color: black;
+    font-weight: bold;
+}
+
+/* Stats */
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.stat-card { background: var(--card-bg); padding: 15px; border-radius: 18px; border: 1px solid #222; }
+.stat-card .label { font-size: 10px; color: #888; text-transform: uppercase; }
+.stat-card .value { font-size: 20px; margin: 0; font-weight: 800; }
+
+/* Charts */
+.chart-box { background: var(--card-bg); padding: 20px; border-radius: 20px; border: 1px solid #222; height: 220px; }
+
+/* Tasks */
+.task-item {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--electric-purple);
+}
+.task-info span { display: block; font-weight: 600; }
+.task-info small { color: var(--neon-green); }
+.btn-complete {
+    background: #222;
+    border: none;
+    color: var(--neon-green);
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+}
+.btn-add-task {
+    background: transparent;
+    border: 1px dashed #444;
+    color: #888;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.text-neon { color: var(--neon-green); }
+.text-purple { color: var(--electric-purple); }
+
+/* Navigation (igual as anteriores) */
+.main-nav { position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); width: 90%; background: rgba(20, 20, 20, 0.95); backdrop-filter: blur(10px); border-radius: 25px; display: flex; justify-content: space-around; padding: 10px; border: 1px solid #333; }
+.nav-link { color: #888; font-size: 1.4rem; }
+.nav-link.active { color: var(--neon-green); }
+.nav-add { background: var(--neon-green); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: black; }

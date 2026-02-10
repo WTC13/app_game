@@ -1,0 +1,46 @@
+:root {
+    --dark-bg: #050505;
+    --card-bg: #121212;
+    --neon-green: #CCFF00;
+    --electric-purple: #7000FF;
+    --fire-orange: #FF4D00;
+}
+
+body { background-color: var(--dark-bg); color: white; font-family: 'Inter', sans-serif; }
+.app-wrapper { max-width: 480px; margin: 0 auto; padding: 20px 20px 100px 20px; }
+
+/* Streak Header */
+.streak-fire { font-size: 3rem; color: var(--fire-orange); filter: drop-shadow(0 0 15px var(--fire-orange)); }
+.streak-number { font-weight: 900; margin-left: -5px; }
+.xp-bar-container { background: #1a1a1a; padding: 10px; border-radius: 12px; margin-top: 15px; }
+.progress-track-xp { height: 8px; background: #333; border-radius: 4px; overflow: hidden; }
+.progress-fill-xp { height: 100%; background: linear-gradient(90deg, var(--electric-purple), var(--neon-green)); }
+
+/* Week Tracker */
+.week-tracker { display: flex; justify-content: space-between; gap: 5px; }
+.day { background: #1a1a1a; flex: 1; height: 60px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #222; }
+.day.active { background: rgba(204, 255, 0, 0.1); border-color: var(--neon-green); color: var(--neon-green); }
+.day.current { border: 2px solid var(--electric-purple); }
+.day .dot { width: 6px; height: 6px; background: var(--electric-purple); border-radius: 50%; }
+
+/* Mission Cards */
+.mission-card { background: var(--card-bg); padding: 15px; border-radius: 18px; display: flex; align-items: center; gap: 15px; margin-bottom: 12px; border: 1px solid #222; }
+.gold-border { border: 1px solid #FFD700; background: linear-gradient(145deg, #121212, #1a1500); }
+.mission-icon { font-size: 1.5rem; color: var(--electric-purple); }
+.mission-details h6 { margin: 0; font-weight: bold; }
+.mission-details p { font-size: 11px; color: #888; margin: 0; }
+.mini-progress { height: 4px; background: #333; border-radius: 2px; margin-top: 5px; }
+.mini-progress .fill { height: 100%; background: var(--neon-green); }
+.mission-reward { font-size: 12px; font-weight: bold; color: var(--neon-green); }
+.btn-claim { background: var(--neon-green); border: none; padding: 5px 12px; border-radius: 8px; font-weight: bold; font-size: 11px; color: black; }
+
+/* Skill Boxes */
+.skill-box { background: #1a1a1a; padding: 15px; border-radius: 15px; text-align: center; border-bottom: 3px solid var(--electric-purple); }
+.skill-box .label { font-size: 10px; color: #888; text-transform: uppercase; }
+.skill-box .value { font-weight: bold; font-size: 1.2rem; }
+
+/* Nav (Padrão) */
+.main-nav { position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); width: 90%; background: rgba(15, 15, 15, 0.95); backdrop-filter: blur(10px); border-radius: 25px; display: flex; justify-content: space-around; padding: 10px; border: 1px solid #333; }
+.nav-link { color: #555; font-size: 1.4rem; }
+.nav-link.active { color: var(--neon-green); }
+.nav-add { background: var(--neon-green); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: black; }

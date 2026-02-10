@@ -1,0 +1,91 @@
+:root {
+    --dark-bg: #0a0a0a;
+    --card-bg: #1a1a1a;
+    --neon-green: #CCFF00;
+    --electric-purple: #7000FF;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.app-wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.text-purple { color: var(--electric-purple); }
+.text-neon-green { color: var(--neon-green); }
+
+/* Busca */
+.search-wiki {
+    background: var(--card-bg);
+    padding: 12px 15px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #333;
+}
+.search-wiki input {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    width: 100%;
+}
+
+/* Category Cards */
+.cat-card {
+    background: var(--card-bg);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+.cat-card.active {
+    background: var(--electric-purple);
+    border-color: var(--electric-purple);
+}
+
+/* Accordion Custom */
+.accordion-item {
+    background: transparent !important;
+    border-bottom: 1px solid #222 !important;
+}
+.accordion-button {
+    background: transparent !important;
+    color: white !important;
+    box-shadow: none !important;
+    padding: 20px 0;
+    font-weight: 500;
+}
+.accordion-button::after {
+    filter: invert(1); /* Torna o ícone branco */
+}
+.accordion-button:not(.collapsed) {
+    color: var(--neon-green) !important;
+}
+
+/* Support Card */
+.support-card {
+    background: linear-gradient(145deg, #1a1a1a, #000);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid var(--neon-green);
+}
+.btn-support {
+    background: var(--neon-green);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+}

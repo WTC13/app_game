@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor de Gamificação - Streaks</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="../public/css/game.css">
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <header class="streak-header text-center mb-4">
+            <div class="streak-fire">
+                <i class="bi bi-fire"></i>
+                <span class="streak-number">12</span>
+            </div>
+            <h4 class="fw-bold mt-2">Dias de <span class="text-neon">Foco Total</span></h4>
+            <div class="xp-bar-container">
+                <div class="xp-info d-flex justify-content-between">
+                    <span>Nível 08</span>
+                    <span>1.250 / 2.000 XP</span>
+                </div>
+                <div class="progress-track-xp">
+                    <div class="progress-fill-xp" style="width: 62.5%;"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="week-tracker mb-4">
+            <div class="day active"><small>S</small><i class="bi bi-check-circle-fill"></i></div>
+            <div class="day active"><small>T</small><i class="bi bi-check-circle-fill"></i></div>
+            <div class="day active"><small>Q</small><i class="bi bi-check-circle-fill"></i></div>
+            <div class="day current"><small>Q</small><span class="dot"></span></div>
+            <div class="day"><small>S</small></div>
+            <div class="day"><small>S</small></div>
+            <div class="day"><small>D</small></div>
+        </div>
+
+        <section class="missions-section mb-4">
+            <h6 class="text-uppercase text-muted small fw-bold mb-3">Missões Ativas</h6>
+            
+            <div class="mission-card gold-border">
+                <div class="mission-icon"><i class="bi bi-lightning-fill"></i></div>
+                <div class="mission-details">
+                    <h6>Madrugador de Elite</h6>
+                    <p>Acordar antes das 06:00 (4/5 dias)</p>
+                    <div class="mini-progress"><div class="fill" style="width: 80%;"></div></div>
+                </div>
+                <div class="mission-reward">+500 XP</div>
+            </div>
+
+            <div class="mission-card">
+                <div class="mission-icon"><i class="bi bi-piggy-bank"></i></div>
+                <div class="mission-details">
+                    <h6>Investidor Consciente</h6>
+                    <p>Não gastar com iFood hoje</p>
+                </div>
+                <button class="btn-claim" onclick="claimMission(this)">Resgatar</button>
+            </div>
+        </section>
+
+        <section class="skills-section mb-4">
+            <h6 class="text-uppercase text-muted small fw-bold mb-3">Atributos do Avatar</h6>
+            <div class="row g-2">
+                <div class="col-6">
+                    <div class="skill-box">
+                        <span class="label">Resistência</span>
+                        <div class="value">LVL 14</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="skill-box">
+                        <span class="label">Finanças</span>
+                        <div class="value">LVL 09</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <nav class="main-nav">
+            <div class="nav-add"><i class="bi bi-house-door"></i></div>
+            <a href="./dash.html" class="nav-link"><i class="bi bi-graph-up"></i></a>
+            <a href="./sports.html" class="nav-link"><i class="fa-solid fa-table-tennis-paddle-ball"></i></a>
+            <a href="./game.html" class="nav-link active"><i class="bi bi-trophy"></i></a>
+            <a href="./finances.html" class="nav-link"><i class="bi bi-currency-dollar"></i></a>
+            <a href="./social.html" class="nav-link"><i class="bi bi-people"></i></a>
+            <a href="./person.html" class="nav-link"><i class="bi bi-person"></i></a>
+            <a href="./wiki.html" class="nav-link"><i class="bi bi-question-circle"></i></a>
+        </nav>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        function claimMission(btn) {
+            $(btn).text('CONCLUÍDO').addClass('disabled').css('background', '#222').css('color', '#555');
+            alert('Parabéns! XP creditado e Streak mantido!');
+        }
+    </script>
+</body>
+</html>
